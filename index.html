@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <title>Pro eSports League | Pro Football</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #101e30;
+      --green: #32f59a;
+      --text: #f4f7fb;
+      --muted: #9aaabe;
+    }* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  padding: 20px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #243349;
+}
+
+.brand { font-size: 21px; font-weight: 900; }
+.brand span { color: var(--green); }
+
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { color: var(--text); text-decoration: none; font-size: 14px; }
+
+.hero {
+  padding: 75px 6%;
+  background: radial-gradient(ellipse at top right, #174a3a, transparent 55%);
+}
+
+.badge {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 { font-size: clamp(38px, 8vw, 70px); margin: 18px 0; }
+h1 span { color: var(--green); }
+.hero p { color: var(--muted); line-height: 1.7; max-width: 540px; }
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 13px 22px;
+  border-radius: 7px;
+  background: var(--green);
+  color: #06131a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main { padding: 35px 6%; }
+.section-title { margin-bottom: 20px; }
+.section-title p { color: var(--muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #26384e;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.card h3 { margin-top: 0; }
+.muted { color: var(--muted); }
+.number { color: var(--green); font-size: 28px; font-weight: bold; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 13px 9px; text-align: left; border-bottom: 1px solid #26384e; }
+th { color: var(--green); font-size: 12px; }
+.table-wrap { overflow-x: auto; }
+
+footer {
+  padding: 25px 6%;
+  border-top: 1px solid #26384e;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body><header>
+  <div class="brand">PRO <span>ESPORTS</span> LEAGUE</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#competitions">Competitions</a>
+    <a href="#fixtures">Fixtures</a>
+    <a href="#standings">Standings</a>
+  </nav>
+</header><section class="hero" id="home">
+  <div class="badge">COMPETE • PLAY • BECOME A CHAMPION</div>
+  <h1>YOUR GAME.<br>YOUR <span>GLORY.</span></h1>
+  <p>
+    Welcome to Pro Football, the home of competitive football gaming.
+    Follow competitions, discover upcoming matches, track results,
+    and rise through the league rankings.
+  </p>
+  <a class="button" href="#competitions">Explore the League</a>
+</section><main>
+  <section id="competitions">
+    <div class="section-title">
+      <h2>Our Competitions</h2>
+      <p>Enter the arena and prove your skills.</p>
+    </div><div class="grid">
+  <div class="card">
+    <h3>⚽ Pro Football League</h3>
+    <p class="muted">Compete for points, climb the table, and chase the title.</p>
+    <span class="badge">LEAGUE COMPETITION</span>
+  </div>
+
+  <div class="card">
+    <h3>🏆 Knockout Cup</h3>
+    <p class="muted">One match at a time. Every result matters.</p>
+    <span class="badge">CUP COMPETITION</span>
+  </div>
+
+  <div class="card">
+    <h3>🎮 Player Rankings</h3>
+    <p class="muted">Track the best players and their progress.</p>
+    <span class="badge">PLAYER LEADERBOARD</span>
+  </div>
+</div>
+
+  </section>  <section id="fixtures" style="margin-top:50px">
+    <div class="section-title">
+      <h2>Upcoming Fixtures</h2>
+      <p>Official match schedules will appear here.</p>
+    </div><div class="card">
+  <p>Fixtures have not been published yet.</p>
+  <p class="muted">Check back when the league schedule is announced.</p>
+</div>
+
+  </section>  <section id="standings" style="margin-top:50px">
+    <div class="section-title">
+      <h2>League Standings</h2>
+      <p>The official table will update when verified match results are added.</p>
+    </div><div class="card table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>POS</th>
+        <th>PLAYER / TEAM</th>
+        <th>PLAYED</th>
+        <th>POINTS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="4" class="muted">No official standings published yet.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </section>
+</main><footer>
+  <p>© 2026 Pro eSports League — Pro Football</p>
+  <p>Play with skill. Compete with respect.</p>
+</footer></body>
+  </html>
