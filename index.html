@@ -1,71 +1,196 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07111f">
-  <title>Pro eSports League | Pro Football</title>
-  <style>
-    :root {
-      --bg: #07111f;
-      --panel: #101e30;
-      --green: #32f59a;
-      --text: #f4f7fb;
-      --muted: #9aaabe;
-    }* { box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b16">
+
+<title>Pro eSports League | Pro Football</title>
+
+<style>
+:root {
+  --bg: #070b16;
+  --panel: #10182a;
+  --green: #39ff9c;
+  --blue: #00c8ff;
+  --text: #f5f7ff;
+  --muted: #a0abc0;
+  --border: #26334c;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+  font-family: Arial, sans-serif;
 }
 
 header {
-  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 18px 6%;
+  background: #090e1c;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #243349;
+  gap: 12px;
 }
 
-.brand { font-size: 21px; font-weight: 900; }
-.brand span { color: var(--green); }
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--green);
+  border-radius: 12px;
+  font-size: 25px;
+  box-shadow: 0 0 15px #39ff9c30;
+}
 
-nav { display: flex; gap: 18px; flex-wrap: wrap; }
-nav a { color: var(--text); text-decoration: none; font-size: 14px; }
+.logo-text {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo-text span {
+  color: var(--green);
+}
+
+.logo-text small {
+  display: block;
+  color: var(--blue);
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--green);
+}
 
 .hero {
-  padding: 75px 6%;
-  background: radial-gradient(ellipse at top right, #174a3a, transparent 55%);
+  min-height: 490px;
+  padding: 85px 7%;
+  background:
+    radial-gradient(ellipse at 85% 25%, #003b4c70, transparent 45%),
+    radial-gradient(ellipse at 15% 85%, #004b2d55, transparent 45%),
+    #070b16;
+  border-bottom: 1px solid var(--border);
 }
 
-.badge {
+.tag {
+  display: inline-block;
+  padding: 9px 13px;
   color: var(--green);
-  font-size: 12px;
+  background: #39ff9c12;
+  border: 1px solid #39ff9c55;
+  border-radius: 5px;
+  font-size: 11px;
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-h1 { font-size: clamp(38px, 8vw, 70px); margin: 18px 0; }
-h1 span { color: var(--green); }
-.hero p { color: var(--muted); line-height: 1.7; max-width: 540px; }
-
-.button {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 13px 22px;
-  border-radius: 7px;
-  background: var(--green);
-  color: #06131a;
-  font-weight: bold;
-  text-decoration: none;
+.hero h1 {
+  margin: 25px 0 15px;
+  font-size: clamp(40px, 9vw, 76px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -2px;
 }
 
-main { padding: 35px 6%; }
-.section-title { margin-bottom: 20px; }
-.section-title p { color: var(--muted); }
+.hero h1 span {
+  color: var(--green);
+  text-shadow: 0 0 25px #39ff9c35;
+}
+
+.hero p {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.btn-primary {
+  color: #06120d;
+  background: var(--green);
+}
+
+.btn-secondary {
+  color: var(--text);
+  border: 1px solid var(--blue);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+main {
+  padding: 45px 6%;
+}
+
+.section {
+  margin-bottom: 55px;
+  scroll-margin-top: 25px;
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading .tag {
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 10px 0;
+  font-size: clamp(25px, 5vw, 36px);
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.7;
+}
 
 .grid {
   display: grid;
@@ -74,107 +199,309 @@ main { padding: 35px 6%; }
 }
 
 .card {
-  background: var(--panel);
-  border: 1px solid #26384e;
+  padding: 24px;
+  background: linear-gradient(145deg, #121d31, #0c1322);
+  border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 22px;
+  transition: 0.2s;
 }
 
-.card h3 { margin-top: 0; }
-.muted { color: var(--muted); }
-.number { color: var(--green); font-size: 28px; font-weight: bold; }
+.card:hover {
+  border-color: var(--green);
+  transform: translateY(-3px);
+}
 
-table { width: 100%; border-collapse: collapse; }
-th, td { padding: 13px 9px; text-align: left; border-bottom: 1px solid #26384e; }
-th { color: var(--green); font-size: 12px; }
-.table-wrap { overflow-x: auto; }
+.card-icon {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.card-label {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.status {
+  display: inline-block;
+  padding: 7px 10px;
+  color: var(--blue);
+  background: #00c8ff12;
+  border: 1px solid #00c8ff45;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 450px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+th {
+  color: var(--green);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+td {
+  color: var(--muted);
+}
+
+.empty {
+  text-align: center;
+  padding: 35px 15px;
+  line-height: 1.8;
+}
+
+.empty strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.join-box {
+  padding: 35px 25px;
+  text-align: center;
+  background: linear-gradient(120deg, #102a27, #10182a, #10202e);
+  border: 1px solid #39ff9c55;
+  border-radius: 14px;
+}
+
+.join-box h2 {
+  font-size: clamp(25px, 5vw, 36px);
+}
+
+.join-box p {
+  color: var(--muted);
+  line-height: 1.8;
+}
 
 footer {
-  padding: 25px 6%;
-  border-top: 1px solid #26384e;
-  color: var(--muted);
-  font-size: 13px;
+  padding: 30px 6%;
   text-align: center;
+  border-top: 1px solid var(--border);
+  background: #090e1c;
 }
 
-  </style>
+footer strong {
+  color: var(--green);
+  letter-spacing: 1px;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  header {
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  .hero {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  main {
+    padding-top: 35px;
+  }
+}
+</style>
 </head>
-<body><header>
-  <div class="brand">PRO <span>ESPORTS</span> LEAGUE</div>
+
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🎮</div>
+    <div class="logo-text">
+      PRO <span>ESPORTS</span>
+      <small>LEAGUE</small>
+    </div>
+  </div>
+
   <nav>
-    <a href="#home">Home</a>
-    <a href="#competitions">Competitions</a>
-    <a href="#fixtures">Fixtures</a>
-    <a href="#standings">Standings</a>
+    <a href="#home">HOME</a>
+    <a href="#competitions">COMPETITIONS</a>
+    <a href="#fixtures">FIXTURES</a>
+    <a href="#standings">STANDINGS</a>
   </nav>
-</header><section class="hero" id="home">
-  <div class="badge">COMPETE • PLAY • BECOME A CHAMPION</div>
-  <h1>YOUR GAME.<br>YOUR <span>GLORY.</span></h1>
+</header>
+
+<section class="hero" id="home">
+  <span class="tag">THE NEXT GENERATION OF FOOTBALL GAMING</span>
+
+  <h1>
+    PLAY TO WIN.<br>
+    <span>RISE TO GLORY.</span>
+  </h1>
+
   <p>
-    Welcome to Pro Football, the home of competitive football gaming.
-    Follow competitions, discover upcoming matches, track results,
-    and rise through the league rankings.
+    Welcome to Pro eSports League, the home of competitive
+    football gaming. Challenge your rivals, compete in tournaments,
+    and prove that you belong among the best.
   </p>
-  <a class="button" href="#competitions">Explore the League</a>
-</section><main>
-  <section id="competitions">
-    <div class="section-title">
+
+  <div class="buttons">
+    <a class="btn btn-primary" href="#competitions">
+      EXPLORE COMPETITIONS ↗
+    </a>
+
+    <a class="btn btn-secondary" href="#standings">
+      VIEW STANDINGS
+    </a>
+  </div>
+</section>
+
+<main>
+
+  <section class="section" id="competitions">
+    <div class="section-heading">
+      <span class="tag">ENTER THE ARENA</span>
       <h2>Our Competitions</h2>
-      <p>Enter the arena and prove your skills.</p>
-    </div><div class="grid">
-  <div class="card">
-    <h3>⚽ Pro Football League</h3>
-    <p class="muted">Compete for points, climb the table, and chase the title.</p>
-    <span class="badge">LEAGUE COMPETITION</span>
-  </div>
+      <p>Choose your competition. Show your skills. Chase the title.</p>
+    </div>
 
-  <div class="card">
-    <h3>🏆 Knockout Cup</h3>
-    <p class="muted">One match at a time. Every result matters.</p>
-    <span class="badge">CUP COMPETITION</span>
-  </div>
+    <div class="grid">
 
-  <div class="card">
-    <h3>🎮 Player Rankings</h3>
-    <p class="muted">Track the best players and their progress.</p>
-    <span class="badge">PLAYER LEADERBOARD</span>
-  </div>
-</div>
+      <div class="card">
+        <div class="card-icon">⚽</div>
+        <h3>Pro Football League</h3>
+        <p>
+          Compete against other players, earn points, and fight
+          your way to the top of the league table.
+        </p>
+        <span class="card-label">LEAGUE COMPETITION</span>
+      </div>
 
-  </section>  <section id="fixtures" style="margin-top:50px">
-    <div class="section-title">
-      <h2>Upcoming Fixtures</h2>
-      <p>Official match schedules will appear here.</p>
-    </div><div class="card">
-  <p>Fixtures have not been published yet.</p>
-  <p class="muted">Check back when the league schedule is announced.</p>
-</div>
+      <div class="card">
+        <div class="card-icon">🏆</div>
+        <h3>Knockout Cup</h3>
+        <p>
+          Every match counts. Defeat your opponents and progress
+          towards the ultimate cup victory.
+        </p>
+        <span class="card-label">KNOCKOUT TOURNAMENT</span>
+      </div>
 
-  </section>  <section id="standings" style="margin-top:50px">
-    <div class="section-title">
-      <h2>League Standings</h2>
-      <p>The official table will update when verified match results are added.</p>
-    </div><div class="card table-wrap">
-  <table>
-    <thead>
-      <tr>
-        <th>POS</th>
-        <th>PLAYER / TEAM</th>
-        <th>PLAYED</th>
-        <th>POINTS</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td colspan="4" class="muted">No official standings published yet.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      <div class="card">
+        <div class="card-icon">🎮</div>
+        <h3>Player Rankings</h3>
+        <p>
+          Follow player performance, track league positions,
+          and discover who is leading the competition.
+        </p>
+        <span class="card-label">PLAYER LEADERBOARD</span>
+      </div>
 
+    </div>
   </section>
-</main><footer>
-  <p>© 2026 Pro eSports League — Pro Football</p>
-  <p>Play with skill. Compete with respect.</p>
-</footer></body>
-  </html>
+
+  <section class="section" id="fixtures">
+    <div class="section-heading">
+      <span class="tag">MATCH CENTRE</span>
+      <h2>Upcoming Fixtures</h2>
+      <p>Stay ready for your next challenge.</p>
+    </div>
+
+    <div class="card empty">
+      <div class="card-icon">📅</div>
+      <strong>No fixtures published yet</strong>
+      Official match schedules will appear here when
+      the league fixtures are announced.
+    </div>
+  </section>
+
+  <section class="section" id="standings">
+    <div class="section-heading">
+      <span class="tag">THE RACE FOR FIRST PLACE</span>
+      <h2>League Standings</h2>
+      <p>Follow the competition and see who rises to the top.</p>
+    </div>
+
+    <div class="card table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>POS</th>
+            <th>PLAYER / TEAM</th>
+            <th>PLAYED</th>
+            <th>POINTS</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td colspan="4" class="empty">
+              <strong>No official standings yet</strong>
+              The league table will be populated when
+              verified match results are entered.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="join-box">
+      <span class="tag">YOUR MOMENT STARTS HERE</span>
+
+      <h2>Ready to Compete?</h2>
+
+      <p>
+        Become part of the Pro eSports League community.
+        Prepare for competitive football gaming and upcoming tournaments.
+      </p>
+
+      <span class="status">PLAYER REGISTRATION COMING SOON</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>PRO ESPORTS LEAGUE</strong>
+  <p>PRO FOOTBALL · COMPETE · IMPROVE · CONQUER</p>
+  <p>© 2026 Pro eSports League. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
